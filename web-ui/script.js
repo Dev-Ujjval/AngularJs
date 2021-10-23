@@ -2,9 +2,12 @@
 
 (function () {
 
-  var app = angular.module('third', []);
+  var app = angular.module('fourth', []);
 
   var MainCtrl = function ($scope, $http) {
+    $scope.username = "dev-ujjval";
+    $scope.message = "Hello, Angular!";
+
     var onUserComplete = function (response) {
       $scope.user = response.data;
     }
@@ -13,10 +16,12 @@
       $scope.error = "Could not fetch the user";
     }
 
-    $http.get("https://api.github.com/users/dev-ujjval")
-      .then(onUserComplete, onError);
+    $scope.search = function() {
+      $http.get("https://api.github.com/users/" + $scope.username)
+      .then(onUserComplete, onError);  
+    }
 
-    $scope.message = "Hello, Angular!";
+    $scope.search();
   }
 
   app.controller("MainCtrl", ["$scope", "$http", MainCtrl]);
