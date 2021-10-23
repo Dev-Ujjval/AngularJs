@@ -65,6 +65,3 @@
         
     5] $http 
         - $http is an AngularJS service for reading data from remote servers. The $http is a core AngularJS service that is used to communicate with the remote HTTP service via browser's XMLHttpRequest object or via JSONP
-
-## Run
-open index.html
