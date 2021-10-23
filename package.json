@@ -1,0 +1,23 @@
+{
+  "name": "hello",
+  "version": "1.0.1",
+  "description": "Hello 01",
+  "main": "server.js",
+  "scripts": {
+    "test": "npm test",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dev-Ujjval/AngularJs.git"
+  },
+  "author": "Ujjval Parekh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Dev-Ujjval/AngularJs/issues"
+  },
+  "homepage": "https://github.com/Dev-Ujjval/AngularJs#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
