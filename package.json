@@ -1,7 +1,7 @@
 {
-  "name": "sis",
+  "name": "serviceseparation",
   "version": "1.0.1",
-  "description": "Service inside service",
+  "description": "Service Separation - 06",
   "main": "server.js",
   "dependencies": {
     "accepts": "^1.3.7",
