@@ -1,15 +1,25 @@
 'use strict';
 
-var angular = angular.module('second', []);
+(function () {
 
-angular.controller('MainCtrl', function($scope) {
- 
-  var person = {
-    firstName: "Ujjval",
-    lastName: "Parekh",
-    imageSrc: "https://gdevtechnologies.com/assets/img/team/team-ujjval.jpg"
+  var app = angular.module('third', []);
+
+  var MainCtrl = function ($scope, $http) {
+    var onUserComplete = function (response) {
+      $scope.user = response.data;
+    }
+
+    var onError = function (reason) {
+      $scope.error = "Could not fetch the user";
+    }
+
+    $http.get("https://api.github.com/users/dev-ujjval")
+      .then(onUserComplete, onError);
+
+    $scope.message = "Hello, Angular!";
   }
 
-  $scope.name = 'Hello, AngularJs!';
-  $scope.person = person;
-});
+  app.controller("MainCtrl", ["$scope", "$http", MainCtrl]);
+
+}());
+

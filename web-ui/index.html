@@ -1,25 +1,38 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="second">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Simple Data Bind (02)</title>
-    <!-- include global css -->
-    <link rel="stylesheet" href="assets/css/style.css">
-    <!-- include global js -->
-    <script src="assets/js/angular/angular.min.js"></script>
-    <!-- include global jQuery -->
-    <script src="assets/js/jQuery/jquery.min.js"></script>
+<html lang="en" ng-app="third">
 
-    <!-- include main angular module -->
-    <script src="script.js"></script>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dynamic Data Bind (03)</title>
+  <!-- include global css -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <!-- include global js -->
+  <script src="assets/js/angular/angular.min.js"></script>
+  <!-- include global jQuery -->
+  <script src="assets/js/jQuery/jquery.min.js"></script>
+
+  <!-- include main angular module -->
+  <script src="script.js"></script>
 </head>
+
 <body ng-controller="MainCtrl">
-  <h1>{{name}}</h1>
-  <div>First name: {{person.firstName}}</div>
-  <div>Last name: {{person.lastName}}</div>
+  <h1>{{message}}</h1>
+
   <div>
-    <img height="100px" width="100px" ng-src="{{person.imageSrc}}" alt="" title="{{person.firstName}} {{person.lastName}}"> 
+    {{error}}
+  </div>
+  <div>
+    Name: {{user.name}}
+  </div>
+  <div>
+    Company: {{user.company}}
+  </div>
+  <div>
+    Location: {{user.location}}
+  </div>
+  <div>
+    <img height="100px" width="100px" ng-src="{{user.avatar_url}}" alt="" title="{{user.name}}">
   </div>
 </body>
 

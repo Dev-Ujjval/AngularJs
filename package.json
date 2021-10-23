@@ -1,7 +1,7 @@
 {
-  "name": "simple-data-bind",
+  "name": "dynamic-data-bind",
   "version": "1.0.1",
-  "description": "Simple Data Bind-02",
+  "description": "Dynamic Data Bind - 03",
   "main": "server.js",
   "dependencies": {
     "accepts": "^1.3.7",
