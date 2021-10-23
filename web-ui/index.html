@@ -4,11 +4,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Search User (04)</title>
+  <title>(05)</title>
   <!-- include global css -->
   <link rel="stylesheet" href="assets/css/style.css">
   <!-- include global js -->
-  <script src="assets/js/angular/angular.min.js"></script>
+  <!-- <script src="assets/js/angular/angular.min.js"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.4/angular.min.js"></script>
+  
   <!-- include global jQuery -->
   <script src="assets/js/jQuery/jquery.min.js"></script>
 
@@ -23,16 +25,13 @@
     {{error}}
   </div>
 
-  <div name="searchUser">
+  <form name="searchUser" ng-submit="search()">
     <input type="search" placeholder="Username to find" ng-model="username" >
-    <input type="submit" value="search" ng-click="search()">
-  </div>
+    <input type="submit" value="search">
+  </form>
 
-  <div>
-    <h2>{{user.name}}</h2> 
-    <img width="100px" height="100px" ng-src="{{user.avatar_url}}" alt="" title="{{user.name}}">
-  </div>
-  
+  <div ng-show="user" ng-include="'userdetails.html'"></div>
+
 </body>
 
 
